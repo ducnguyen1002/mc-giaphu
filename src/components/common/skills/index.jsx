@@ -33,8 +33,6 @@ const skillsData = [
             'teambuilding-2.jpg',
             'teambuilding-3.jpg',
             'teambuilding-4.jpg',
-            'teambuilding-5.jpg',
-            'teambuilding-6.jpg',
         ],
         reverse: false,
     },
