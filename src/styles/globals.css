@@ -43,4 +43,39 @@
 
 @layer components {}
 
-@layer utilities {}
+@layer utilities {
+	@keyframes shakeZoom {
+		0% {
+			transform: scale(1) rotate(0);
+		}
+
+		10% {
+			transform: scale(1.1) rotate(-5deg);
+		}
+
+		20% {
+			transform: scale(1.1) rotate(5deg);
+		}
+
+		30% {
+			transform: scale(1.1) rotate(-5deg);
+		}
+
+		40% {
+			transform: scale(1.1) rotate(5deg);
+		}
+
+		50% {
+			transform: scale(1.1) rotate(0);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.animate-shake-zoom {
+		animation: shakeZoom 1.5s ease-in-out infinite;
+	}
+
+}

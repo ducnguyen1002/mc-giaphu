@@ -11,29 +11,22 @@ const personalInfo = [
 
 const AboutMe = () => {
     return (
-        <div className="min-h-screen bg-navy text-white">
-            <div className="container py-10 lg:py-20">
+        <div className="overflow-hidden bg-navy py-10 text-white md:py-20">
+            <div className="container relative z-10">
                 {/* Tiêu đề */}
-                <h2 className="mb-12 uppercase tracking-wide">Giới Thiệu</h2>
-
+                <h2 className="mb-4 text-center uppercase tracking-wide md:text-left">
+                    Giới Thiệu
+                </h2>
+                <p className="mb-16 text-center text-xl font-light text-gray-300 md:text-left">
+                    về bản thân
+                </p>
                 {/* Layout 2 cột */}
-                <div className="grid grid-cols-2 items-center gap-4 lg:grid-cols-4 lg:gap-8">
-                    {/* Ảnh đại diện */}
-
-                    <Image
-                        src="/assets/images/self-4.jpg"
-                        alt="MC Gia Phú"
-                        objectFit="cover"
-                        width={400}
-                        height={600}
-                        className="col-span-2 hidden rounded-2xl object-cover shadow-lg md:col-span-1 md:block"
-                    />
-
+                <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2 md:gap-8">
                     {/* Thông tin cá nhân */}
-                    <div className="col-span-2 h-full space-y-5 rounded-2xl border-[2px] border-white px-3 py-8 font-body text-lg md:col-span-1">
+                    <div className="h-full space-y-5 rounded-xl border-[2px] border-white px-4 py-8 font-body text-lg md:px-10">
                         {personalInfo.map((item, index) => (
                             <div key={index} className="flex flex-col">
-                                <span className="w-32 font-light italic text-warmBlue lg:w-40">
+                                <span className="w-32 font-light italic text-warmBlue md:w-40">
                                     {item.key}
                                 </span>
                                 <span className="text-right font-heading text-xl font-semibold">
@@ -42,24 +35,15 @@ const AboutMe = () => {
                             </div>
                         ))}
                     </div>
-
-                    <Image
-                        src="/assets/images/self-10.jpg"
-                        objectFit="cover"
-                        alt="MC Gia Phú"
-                        width={400}
-                        height={600}
-                        className="hidden rounded-2xl object-cover shadow-lg md:block"
-                    />
-
-                    <Image
-                        src="/assets/images/self-9.jpg"
-                        objectFit="cover"
-                        alt="MC Gia Phú"
-                        width={400}
-                        height={600}
-                        className="hidden rounded-2xl object-cover shadow-lg md:block"
-                    />
+                    {/* Ảnh đại diện */}
+                    <div className="relative h-full">
+                        <Image
+                            src="/assets/images/self-4.jpg"
+                            alt="MC Gia Phú"
+                            fill
+                            className="rounded-xl object-cover"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,206 +1,121 @@
 import Image from 'next/image'
 import React from 'react'
 
+const skillsData = [
+    {
+        title: 'MC Tiệc cưới',
+        description:
+            'Thế mạnh của tôi là dẫn các chương trình tiệc cưới tại tư gia và nhà hàng, lễ ăn hỏi - nạp tài, lễ thành hôn, lễ vu quy, lễ vow hiện đại. Hỗ trợ tư vấn xây dựng kịch bản chương trình cho từng cặp đôi.',
+        images: [
+            'wedding-1.jpg',
+            'wedding-2.jpg',
+            'wedding-3.jpg',
+            'wedding-4.jpg',
+        ],
+        reverse: false,
+    },
+    {
+        title: 'MC Sự kiện',
+        list: [
+            'Dẫn lễ khai trương, gala dinner, tiệc tất niên, hội khóa, hợp lớp',
+            'MC cho các chương trình thực tế, chương trình dành cho thiếu nhi, MC Livestream cho các nhãn hàng',
+            'MC cho các chương trình kỷ niệm thành lập công ty, lễ cất nóc, lễ khởi công, lễ khánh thành...',
+        ],
+        images: ['event-1.jpg', 'event-2.jpg', 'event-3.jpg', 'event-4.jpg'],
+        reverse: true,
+    },
+    {
+        title: 'MC Du lịch',
+        description:
+            'Tổ chức các chương trình Team building, Gala dinner... có ekip hỗ trợ chuyên nghiệp, có thể phục vụ chương trình lên đến hàng ngàn khách',
+        images: [
+            'teambuilding-1.jpg',
+            'teambuilding-2.jpg',
+            'teambuilding-3.jpg',
+            'teambuilding-4.jpg',
+            'teambuilding-5.jpg',
+            'teambuilding-6.jpg',
+        ],
+        reverse: false,
+    },
+    {
+        title: 'MC Sinh nhật, hoạt náo trẻ em',
+        list: [
+            'Thân thiện, gần gũi với trẻ em.',
+            'Kỹ năng hoạt náo tốt, làm chủ sân khấu',
+            'Chủ động lên ý tưởng theo sở thích từng bé.',
+            'Có kinh nghiệm làm việc với cả phụ huynh & đơn vị tổ chức.',
+        ],
+        images: [
+            'birthday-1.jpg',
+            'birthday-2.jpg',
+            'birthday-3.jpg',
+            'birthday-4.jpg',
+        ],
+        reverse: true,
+    },
+]
+
 const Skills = () => {
     return (
-        <div className="container min-h-screen bg-lightBlue py-10 text-navy lg:py-20">
-            {/* Tiêu đề */}
-            <h2 className="mb-12 text-right uppercase tracking-wide">
-                Kinh nghiệm làm việc
+        <div className="container bg-lightBlue py-10 text-navy md:py-20">
+            <h2 className="mb-4 text-center uppercase tracking-wide md:text-right">
+                Kinh nghiệm
             </h2>
+            <p className="mb-12 text-center text-xl font-light text-gray-700 md:text-right">
+                trong suốt 5 năm hoạt động nghệ thuật
+            </p>
 
-            <div className="mb-8 flex h-[500px] gap-8">
-                <div className="flex w-full flex-col items-center justify-center gap-6 lg:w-1/3">
-                    <h3>MC Tiệc cưới</h3>
-                    <p className="text-center">
-                        Thế mạnh của tôi là dẫn các chương trình tiệc cưới tại
-                        tư gia và nhà hàng, lễ ăn hỏi - nạp tài, lễ thành hôn,
-                        lễ vu quy, lễ vow hiện đại. Hỗ trợ tư vấn xây dựng kịch
-                        bản chương trình cho từng cặp đôi.
-                    </p>
-                </div>
-                <div className="grid w-full grid-cols-3 grid-rows-2 gap-2 rounded-xl bg-gradient-to-l from-warmBlue to-lightBlue p-2 lg:w-2/3">
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-1.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
+            {skillsData.map((item, index) => (
+                <div
+                    key={index}
+                    className={`mb-12 flex flex-col ${
+                        item.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+                    } gap-6 md:gap-8`}
+                >
+                    {/* Text phần mô tả */}
+                    <div className="flex w-full flex-col items-center justify-center gap-4 md:w-1/3">
+                        <h3 className="text-center text-xl font-semibold md:text-left">
+                            {item.title}
+                        </h3>
+                        {item.description && (
+                            <p className="text-center md:text-left">
+                                {item.description}
+                            </p>
+                        )}
+                        {item.list && (
+                            <ul className="list-disc pl-5 text-left">
+                                {item.list.map((li, i) => (
+                                    <li key={i}>{li}</li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-2.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-3.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-4.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-5.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/wedding-6.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                </div>
-            </div>
 
-            <div className="mb-8 flex h-[500px] flex-row-reverse gap-8">
-                <div className="flex w-full flex-col items-center justify-center gap-6 lg:w-1/3">
-                    <h3>MC Sự kiện</h3>
-                    <ul className="list-disc text-left">
-                        <li>
-                            Dẫn lễ khai trương, gala dinner, tiệc tất niên, hội
-                            khóa, hợp lớp
-                        </li>
-                        <li>
-                            MC cho các chương trình thực tế, chương trình dành
-                            cho thiếu nhi, MC Livestream cho các nhãn hàng
-                        </li>
-                        <li>
-                            MC cho các chương trình kỷ niệm thành lập công ty,
-                            lễ cất nóc, lễ khởi công, lễ khánh thành...
-                        </li>
-                    </ul>
-                </div>
-                <div className="grid w-full grid-cols-3 grid-rows-2 gap-2 rounded-xl bg-gradient-to-r from-navy to-lightBlue p-2 lg:w-2/3">
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-1.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-2.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-3.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-4.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-5.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/event-6.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
+                    {/* Hình ảnh */}
+                    <div
+                        className={`grid w-full grid-cols-2 gap-2 rounded-xl p-2 md:min-h-[480px] ${
+                            item.reverse
+                                ? 'bg-gradient-to-r from-navy to-lightBlue'
+                                : 'bg-gradient-to-l from-warmBlue to-lightBlue'
+                        } md:w-2/3`}
+                    >
+                        {item.images.map((img, i) => (
+                            <div
+                                key={i}
+                                className="relative aspect-[4/3] md:aspect-auto"
+                            >
+                                <Image
+                                    src={`/assets/images/${img}`}
+                                    alt={item.title}
+                                    fill
+                                    className="rounded-xl object-cover"
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
-
-            <div className="mb-8 flex h-[500px] gap-8">
-                <div className="flex w-full flex-col items-center justify-center gap-6 lg:w-1/3">
-                    <h3>MC Du lịch</h3>
-                    <p className="text-center">
-                        Tổ chức các chương trình Team building, Gala dinner...
-                        có ekip hỗ trợ chuyên nghiệp, có thể phục vụ chương
-                        trình lên đến hàng ngàn khách
-                    </p>
-                </div>
-                <div className="grid w-full grid-cols-3 grid-rows-2 gap-2 rounded-xl bg-gradient-to-l from-warmBlue to-lightBlue p-2 lg:w-2/3">
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-1.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-2.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-3.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-4.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-5.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src={'/assets/images/teambuilding-6.jpg'}
-                            alt="event"
-                            className="rounded-xl object-cover"
-                            fill
-                        />
-                    </div>
-                </div>
-            </div>
+            ))}
         </div>
     )
 }

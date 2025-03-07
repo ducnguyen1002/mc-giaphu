@@ -1,6 +1,7 @@
 import AboutMe from '@/components/common/about-me'
 import Hero from '@/components/common/hero'
 import Skills from '@/components/common/skills'
+import WhyMe from '@/components/common/why-me'
 import Head from 'next/head'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
             <Hero />
             <AboutMe />
             <Skills />
+            <WhyMe />
         </>
     )
 }
