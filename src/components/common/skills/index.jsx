@@ -56,7 +56,10 @@ const skillsData = [
 
 const Skills = () => {
     return (
-        <div className="container bg-lightBlue py-10 text-navy md:py-20">
+        <section
+            id="kinh-nghiem"
+            className="container bg-lightBlue py-10 text-navy md:py-20"
+        >
             <h2 className="mb-4 text-center uppercase tracking-wide md:text-right">
                 Kinh nghiệm
             </h2>
@@ -67,13 +70,25 @@ const Skills = () => {
             {skillsData.map((item, index) => (
                 <div
                     key={index}
-                    className={`mb-12 flex flex-col ${
+                    className={`relative mb-12 flex flex-col md:items-stretch ${
                         item.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
                     } gap-6 md:gap-8`}
                 >
                     {/* Text phần mô tả */}
-                    <div className="flex w-full flex-col items-center justify-center gap-4 md:w-1/3">
-                        <h3 className="text-center text-xl font-semibold md:text-left">
+
+                    <div
+                        data-aos="fade-right"
+                        className="relative z-10 flex flex-col items-center justify-center gap-4 md:w-1/3"
+                    >
+                        {/* Số thứ tự */}
+                        <span className="absolute left-0 top-0 font-heading text-[80px] font-bold text-navy opacity-30 md:top-[10%] md:text-[150px]">
+                            {index + 1}.
+                        </span>
+                        <h3
+                            data-aos="fade-right"
+                            data-aos-delay="100"
+                            className="text-center font-semibold md:text-left"
+                        >
                             {item.title}
                         </h3>
                         {item.description && (
@@ -92,6 +107,7 @@ const Skills = () => {
 
                     {/* Hình ảnh */}
                     <div
+                        data-aos="fade-left"
                         className={`grid w-full grid-cols-2 gap-2 rounded-xl p-2 md:min-h-[480px] ${
                             item.reverse
                                 ? 'bg-gradient-to-r from-navy to-lightBlue'
@@ -114,7 +130,7 @@ const Skills = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     )
 }
 

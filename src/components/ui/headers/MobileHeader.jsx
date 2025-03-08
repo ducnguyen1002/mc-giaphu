@@ -3,14 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-
-const navItems = [
-    { title: 'Giới thiệu', id: '#aboutMe' },
-    { title: 'Kinh nghiệm', id: '#skills' },
-    { title: 'Vì sao', id: '#whyMe' },
-    { title: 'Đánh giá từ KH', id: '#feedbacks' },
-    { title: 'Liên hệ', id: '#contact' },
-]
+import { navItems } from '@/components/ui/headers/DesktopHeader'
 
 const MobileHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)

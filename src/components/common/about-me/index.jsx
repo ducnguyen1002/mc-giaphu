@@ -11,7 +11,10 @@ const personalInfo = [
 
 const AboutMe = () => {
     return (
-        <div className="overflow-hidden bg-navy py-10 text-white md:py-20">
+        <section
+            id="gioi-thieu"
+            className="overflow-hidden bg-navy py-10 text-white md:py-20"
+        >
             <div className="container relative z-10">
                 {/* Tiêu đề */}
                 <h2 className="mb-4 text-center uppercase tracking-wide md:text-left">
@@ -23,7 +26,10 @@ const AboutMe = () => {
                 {/* Layout 2 cột */}
                 <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2 md:gap-8">
                     {/* Thông tin cá nhân */}
-                    <div className="h-full space-y-5 rounded-xl border-[2px] border-white px-4 py-8 font-body text-lg md:px-10">
+                    <div
+                        data-aos="fade-right"
+                        className="h-full space-y-5 rounded-xl border-[2px] border-white px-4 py-8 font-body text-lg md:px-10"
+                    >
                         {personalInfo.map((item, index) => (
                             <div key={index} className="flex flex-col">
                                 <span className="w-32 font-light italic text-warmBlue md:w-40">
@@ -36,7 +42,7 @@ const AboutMe = () => {
                         ))}
                     </div>
                     {/* Ảnh đại diện */}
-                    <div className="relative h-full">
+                    <div data-aos="fade-left" className="relative h-full">
                         <Image
                             src="/assets/images/self-4.jpg"
                             alt="MC Gia Phú"
@@ -46,7 +52,7 @@ const AboutMe = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

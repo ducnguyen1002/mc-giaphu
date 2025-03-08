@@ -9,7 +9,7 @@ const index = () => {
             {/* Nút Gọi điện */}
             <a
                 href={'tel:' + USER_PHONENUMBER}
-                className="animate-shake-zoom flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                className="animate-shake-zoom flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
                 title="Gọi điện"
             >
                 <PhoneCall size={24} />
@@ -20,7 +20,7 @@ const index = () => {
                 href={USER_ZALO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
                 title="Zalo"
             >
                 <MessageSquare size={24} />

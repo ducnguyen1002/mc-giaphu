@@ -44,6 +44,34 @@
 @layer components {}
 
 @layer utilities {
+	@keyframes slideLeft {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes slideRight {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(100%);
+		}
+	}
+
+	.animate-slide-left {
+		animation: slideLeft 0.8s ease-in-out forwards;
+	}
+
+	.animate-slide-right {
+		animation: slideRight 0.8s ease-in-out forwards;
+	}
+
 	@keyframes shakeZoom {
 		0% {
 			transform: scale(1) rotate(0);

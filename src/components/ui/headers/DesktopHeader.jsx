@@ -3,12 +3,11 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const navItems = [
-    { title: 'Giới thiệu', id: '#aboutMe' },
-    { title: 'Kinh nghiệm', id: '#skills' },
-    { title: 'Vì sao', id: '#whyMe' },
+export const navItems = [
+    { title: 'Giới thiệu', id: '#gioi-thieu' },
+    { title: 'Kinh nghiệm', id: '#kinh-nghiem' },
+    { title: 'Vì sao', id: '#vi-sao' },
     { title: 'Đánh giá từ KH', id: '#feedbacks' },
-    { title: 'Liên hệ', id: '#contact' },
 ]
 
 const DesktopHeader = () => {
