@@ -60,7 +60,7 @@ const Feedbacks = () => {
                                     src={`/assets/images/${img}`}
                                     alt={`Feedback ${index + 1}`}
                                     fill
-                                    className="rounded-xl object-cover"
+                                    className="rounded-xl object-cover object-top"
                                 />
                             </div>
                         </SwiperSlide>

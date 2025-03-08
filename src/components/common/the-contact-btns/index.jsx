@@ -1,7 +1,8 @@
-import { USER_PHONENUMBER, USER_ZALO_URL } from '@/utils/consts'
+import { USER_FB_URL, USER_PHONENUMBER, USER_ZALO_URL } from '@/utils/consts'
 import { MessageSquare, PhoneCall } from 'lucide-react'
 import React from 'react'
-import { FaMessage } from 'react-icons/fa6'
+import { FaFacebook, FaMessage } from 'react-icons/fa6'
+import { FiFacebook } from 'react-icons/fi'
 
 const index = () => {
     return (
@@ -13,6 +14,17 @@ const index = () => {
                 title="Gọi điện"
             >
                 <PhoneCall size={24} />
+            </a>
+
+            {/* Nút FB */}
+            <a
+                href={USER_FB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                title="Facebook"
+            >
+                <FiFacebook size={24} />
             </a>
 
             {/* Nút Zalo */}

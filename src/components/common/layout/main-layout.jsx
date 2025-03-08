@@ -11,7 +11,9 @@ const MainLayout = ({ children }) => {
     return (
         <main>
             <TheHeader />
-            <div className="overflow-x-hidden bg-lightBlue">{children}</div>
+            <div className="overflow-x-hidden overflow-y-hidden bg-lightBlue">
+                {children}
+            </div>
             <TheFooter />
             <FloatingContactButtons />
             {isLoading && (
