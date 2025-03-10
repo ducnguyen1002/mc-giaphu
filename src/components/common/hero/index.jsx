@@ -6,7 +6,7 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <div className="container flex h-screen max-h-[920px] min-h-[800px] flex-col py-10 md:flex-row md:py-20">
+        <div className="container flex h-screen max-h-[920px] min-h-[800px] flex-col gap-8 py-10 md:flex-row md:gap-0 md:py-20">
             {/* ảnh avatar */}
             <div
                 data-aos="fade-right"

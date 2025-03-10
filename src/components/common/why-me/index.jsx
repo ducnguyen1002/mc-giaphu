@@ -11,9 +11,9 @@ const WhyMe = () => {
             className="container rounded-xl bg-navy py-10 text-white md:py-20"
         >
             {/* Tiêu đề */}
-            <h3 className="mb-4 text-center uppercase tracking-wide text-white">
+            <h2 className="mb-4 text-center uppercase tracking-wide text-white">
                 Vì sao
-            </h3>
+            </h2>
             <p className="mb-16 text-center text-xl font-light text-gray-300">
                 khách hàng lựa chọn MC Gia Phú
             </p>

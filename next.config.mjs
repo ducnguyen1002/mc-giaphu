@@ -4,12 +4,12 @@ const nextConfig = {
   compress: true,
   swcMinify: true,
   images: {
-    remotePatterns: [
-      {
-        hostname: "phimimg.com",
-        protocol: "https"
-      }
-    ]
+    // remotePatterns: [
+    //   {
+    //     hostname: "phimimg.com",
+    //     protocol: "https"
+    //   }
+    // ]
   }
 };
 

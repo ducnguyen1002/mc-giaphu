@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 export const navItems = [
     { title: 'Giới thiệu', id: '#gioi-thieu' },
     { title: 'Kinh nghiệm', id: '#kinh-nghiem' },
+    { title: 'Video thực tế', id: '#video' },
     { title: 'Vì sao', id: '#vi-sao' },
     { title: 'Đánh giá từ KH', id: '#feedbacks' },
 ]
