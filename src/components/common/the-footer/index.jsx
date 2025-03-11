@@ -12,7 +12,7 @@ const TheFooter = () => {
                 <p className="text-sm">
                     Thiết kế & phát triển bởi{' '}
                     <Link
-                        href={'facebook.com/ducduc.1002'}
+                        href={'https://facebook.com/ducduc.1002'}
                         className="text-base font-semibold underline"
                     >
                         Đức Đức
