@@ -92,7 +92,7 @@ const Feedbacks = () => {
             <p
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="mx-auto mt-4 w-full text-center text-lg text-gray-700 lg:max-w-[800px]"
+                className="mx-auto mt-4 w-full text-center text-base text-gray-700 lg:max-w-[800px]"
             >
                 Sự tin tưởng và ủng hộ của quý khách chính là động lực lớn nhất
                 để tôi không ngừng nâng cao chất lượng dịch vụ. Tôi mong rằng
