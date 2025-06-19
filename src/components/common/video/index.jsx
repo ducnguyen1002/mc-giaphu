@@ -14,13 +14,23 @@ const Video = () => {
             </p>
 
             <iframe
-                className="aspect-video max-h-[80vh] w-full rounded-xl"
+                className="aspect-video max-h-[80vh] w-full rounded-xl mb-4"
                 src="https://www.youtube.com/embed/uVhvKM_UKHU"
                 title="Game Show Hoạt Náo Gala Dinner"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
             ></iframe>
+            <iframe 
+                className="aspect-video max-h-[80vh] w-full rounded-xl" 
+                src="https://www.youtube.com/embed/wbK_FKnshdA" 
+                title="Mc Gia Phú dẫn Teambuilding" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            >
+
+            </iframe>
         </section>
     )
 }
