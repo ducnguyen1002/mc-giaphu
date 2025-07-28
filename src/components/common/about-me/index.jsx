@@ -5,7 +5,7 @@ const personalInfo = [
     { key: 'Họ tên', value: 'Nguyễn Văn Phú' },
     { key: 'Nghệ danh', value: 'Gia Phú' },
     { key: 'Năm sinh', value: '1999' },
-    { key: 'Quê quán', value: 'Yên Định, Thanh Hóa' },
+    { key: 'Quê quán', value: 'Thanh Hóa' },
     { key: 'Học vấn', value: 'Tốt nghiệp HV MC Văn Minh năm 2019' },
 ]
 
