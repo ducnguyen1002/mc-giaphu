@@ -161,7 +161,7 @@ const App = () => {
     ]
 
     return (
-        <>
+        <> 
             <Head>
                 <title>Thiệp cưới Gia Phú & Kim Chi</title>
                 <meta
