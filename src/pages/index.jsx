@@ -31,9 +31,6 @@ export default function Home() {
             <Feedbacks />
             <TheFooter />
             <FloatingContactButtons />
-            {isLoading && (
-                <LoadingScreen onFinish={() => setIsLoading(false)} />
-            )}
         </>
     )
 }
