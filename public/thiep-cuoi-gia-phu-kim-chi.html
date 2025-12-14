@@ -546,13 +546,13 @@
     </section>
 
     <section class="relative min-h-[700px]">
-      <img src="/assets/wedding/cap_doi_4.jpg"
+      <img src="/assets/wedding/cap_doi_5.jpg"
         class="absolute inset-0 w-full h-[60%] object-cover object-top">
       <div
         class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/90 h-[60%]">
       </div>
 
-      <div class="relative pt-[250px] px-4 pb-12">
+      <div class="relative pt-[400px] px-4 pb-12">
         <div class="bg-white rounded-2xl shadow-xl p-8 border border-stone-100">
           <h3
             class="text-center font-bold text-xl text-stone-800 mb-6 uppercase">
@@ -760,6 +760,30 @@
       offset: 80,
     });
   </script>
+
+  <script>
+    const music = document.getElementById('background-music');
+    let started = false;
+
+    function startMusic() {
+      if (started) return;
+
+      music.volume = 0.5;
+      music.play().then(() => {
+        started = true;
+        document.removeEventListener('click', startMusic);
+        document.removeEventListener('touchstart', startMusic);
+        document.removeEventListener('scroll', startMusic);
+      }).catch(() => {
+        // autoplay bị chặn, chờ click nút nhạc
+      });
+    }
+
+    document.addEventListener('click', startMusic);
+    document.addEventListener('touchstart', startMusic);
+    document.addEventListener('scroll', startMusic);
+  </script>
+
 
   <script>
     lucide.createIcons();
