@@ -29,9 +29,8 @@ const MobileHeader = () => {
 
     return (
         <div
-            className={`fixed left-0 top-0 z-[1000] w-full transition-transform duration-300 lg:hidden ${
-                isVisible ? 'translate-y-0' : '-translate-y-full'
-            }`}
+            className={`fixed left-0 top-0 z-[1000] w-screen transition-transform duration-300 lg:hidden ${isVisible ? 'translate-y-0' : '-translate-y-full'
+                }`}
         >
             {/* Thanh top chứa icon mở menu */}
             <div className="flex items-center justify-between border-b border-navy bg-white px-4 py-3 shadow-lg">
@@ -46,11 +45,10 @@ const MobileHeader = () => {
 
             {/* Panel menu trượt xuống */}
             <div
-                className={`absolute left-0 top-full w-full overflow-hidden border-b border-navy bg-white shadow-md transition-all duration-300 ${
-                    isMenuOpen
-                        ? 'max-h-[1000px] opacity-100'
-                        : 'max-h-0 opacity-0'
-                }`}
+                className={`absolute left-0 top-full w-full overflow-hidden border-b border-navy bg-white shadow-md transition-all duration-300 ${isMenuOpen
+                    ? 'max-h-[1000px] opacity-100'
+                    : 'max-h-0 opacity-0'
+                    }`}
             >
                 <ul className="flex h-screen flex-col divide-y divide-lightBlue">
                     {navItems.map((nav) => (

@@ -48,7 +48,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className="container flex h-screen max-h-[920px] min-h-[800px] flex-col gap-8 py-10 md:flex-row md:gap-0 md:py-20">
+        <div className="container flex h-screen max-h-[920px] min-h-[800px] flex-col gap-8 pt-20 pb-10 md:flex-row md:gap-0 md:py-20">
             {/* ảnh avatar */}
             <div
                 data-aos="fade-right"
@@ -57,13 +57,12 @@ const Hero = () => {
                 {/* mobile */}
                 <div className="relative block size-full overflow-hidden rounded-2xl border-2 border-warmBlue shadow-2xl shadow-navy/40 md:hidden">
                     <div
-                        className={`relative size-full transition-opacity duration-500 ${
-                            fade ? 'opacity-100' : 'opacity-0'
-                        }`}
+                        className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
+                            }`}
                     >
                         <Image
                             src={mobileImages[currentMobileIndex]}
-                            className="object-cover object-top"
+                            className="object-contain object-top"
                             alt="self-mobile"
                             fill
                         />
@@ -75,9 +74,8 @@ const Hero = () => {
                 <div className="absolute bottom-0 left-0 hidden md:block">
                     <div className="h-[420px] w-[300px] overflow-hidden rounded-xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
                         <div
-                            className={`relative size-full transition-opacity duration-500 ${
-                                fade ? 'opacity-100' : 'opacity-0'
-                            }`}
+                            className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
+                                }`}
                         >
                             <Image
                                 alt="self-left"
@@ -93,16 +91,15 @@ const Hero = () => {
                 <div className="absolute right-[15%] top-0 hidden md:block">
                     <div className="relative h-[420px] w-[300px] overflow-hidden rounded-xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
                         <div
-                            className={`relative size-full transition-opacity duration-500 ${
-                                fade ? 'opacity-100' : 'opacity-0'
-                            }`}
+                            className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
+                                }`}
                         >
                             <Image
                                 alt="self-right"
                                 src={
                                     desktopImages[
-                                        (currentDesktopIndex + 1) %
-                                            desktopImages.length
+                                    (currentDesktopIndex + 1) %
+                                    desktopImages.length
                                     ]
                                 }
                                 fill

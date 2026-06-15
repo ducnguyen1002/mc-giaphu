@@ -27,10 +27,10 @@ module.exports = {
 				body: ['Inter', 'sans-serif'],
 			},
 			colors: {
-				lightBlue: '#F7F2EC',
-				blue: '#c8daea',
-				warmBlue: '#946A52',
-				navy: '#2D2512',
+				lightBlue: '#F0F9FF',
+				blue: '#BAE6FD',
+				warmBlue: '#91d9fd',
+				navy: '#0C4A6E',
 				ivory: {
 					50: '#fffff0',
 					100: '#fefce8',

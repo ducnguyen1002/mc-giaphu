@@ -7,10 +7,10 @@ const skillsData = [
         description:
             'Thế mạnh của tôi là dẫn các chương trình tiệc cưới tại tư gia và nhà hàng, lễ ăn hỏi - nạp tài, lễ thành hôn, lễ vu quy, lễ vow hiện đại. Hỗ trợ tư vấn xây dựng kịch bản chương trình cho từng cặp đôi.',
         images: [
-            'wedding-1.jpg',
-            'wedding-2.jpg',
-            'wedding-3.jpg',
-            'wedding-4.jpg',
+            'wedding-7.jpg',
+            'wedding-8.jpg',
+            'wedding-9.jpg',
+            'wedding-10.jpg',
         ],
         reverse: false,
     },
@@ -64,7 +64,7 @@ const Skills = () => {
                 Kinh nghiệm
             </h2>
             <p className="mb-12 text-center text-xl font-light text-gray-700 md:text-right">
-                trong suốt 5 năm hoạt động nghệ thuật
+                trong suốt {new Date().getFullYear() - 2019} năm hoạt động nghệ thuật
             </p>
 
             {skillsData.map((item, index) => (
