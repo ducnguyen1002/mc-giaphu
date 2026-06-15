@@ -10,7 +10,7 @@ const index = () => {
             {/* Nút Gọi điện */}
             <a
                 href={'tel:' + USER_PHONENUMBER}
-                className="animate-shake-zoom flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                className="animate-shake-zoom flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-warmBlue to-blue text-navy shadow-xl shadow-warmBlue/40 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue/50"
                 title="Gọi điện"
             >
                 <PhoneCall size={24} />
@@ -21,7 +21,7 @@ const index = () => {
                 href={USER_FB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-blue to-lightBlue text-navy shadow-lg shadow-blue/30 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-blue/50"
                 title="Facebook"
             >
                 <FiFacebook size={24} />
@@ -32,7 +32,7 @@ const index = () => {
                 href={USER_ZALO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-navy text-white shadow-lg transition-transform hover:scale-110"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-blue to-lightBlue text-navy shadow-lg shadow-blue/30 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-blue/50"
                 title="Zalo"
             >
                 <MessageSquare size={24} />

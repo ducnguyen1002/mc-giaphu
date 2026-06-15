@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Fancybox } from '@fancyapps/ui'
+import '@fancyapps/ui/dist/fancybox/fancybox.css'
 
 const skillsData = [
     {
@@ -11,6 +13,10 @@ const skillsData = [
             'wedding-8.jpg',
             'wedding-9.jpg',
             'wedding-10.jpg',
+            'wedding-11.jpg',
+            'wedding-12.jpg',
+            'wedding-13.jpg',
+            'wedding-14.jpg',
         ],
         reverse: false,
     },
@@ -21,7 +27,7 @@ const skillsData = [
             'MC cho các chương trình thực tế, chương trình dành cho thiếu nhi, MC Livestream cho các nhãn hàng',
             'MC cho các chương trình kỷ niệm thành lập công ty, lễ cất nóc, lễ khởi công, lễ khánh thành...',
         ],
-        images: ['event-1.jpg', 'event-2.jpg', 'event-3.jpg', 'event-4.jpg'],
+        images: ['event-1.jpg', 'event-2.jpg', 'event-3.jpg', 'event-4.jpg', 'event-5.jpg', 'event-6.jpg'],
         reverse: true,
     },
     {
@@ -33,6 +39,8 @@ const skillsData = [
             'teambuilding-2.jpg',
             'teambuilding-3.jpg',
             'teambuilding-4.jpg',
+            'teambuilding-5.jpg',
+            'teambuilding-6.jpg',
         ],
         reverse: false,
     },
@@ -49,18 +57,30 @@ const skillsData = [
             'birthday-2.jpg',
             'birthday-3.jpg',
             'birthday-4.jpg',
+            'birthday-5.jpg',
+            'birthday-6.jpg',
         ],
         reverse: true,
     },
 ]
 
 const Skills = () => {
+    useEffect(() => {
+        Fancybox.bind('[data-fancybox]', {
+            // Options
+        })
+
+        return () => {
+            Fancybox.destroy()
+        }
+    }, [])
+
     return (
         <section
             id="kinh-nghiem"
             className="container bg-lightBlue py-10 text-navy md:py-20"
         >
-            <h2 className="mb-4 text-center uppercase tracking-wide md:text-right">
+            <h2 className="mb-4 text-center uppercase tracking-wide md:text-right bg-clip-text text-transparent bg-gradient-to-l from-navy to-warmBlue drop-shadow-sm">
                 Kinh nghiệm
             </h2>
             <p className="mb-12 text-center text-xl font-light text-gray-700 md:text-right">
@@ -70,9 +90,8 @@ const Skills = () => {
             {skillsData.map((item, index) => (
                 <div
                     key={index}
-                    className={`relative mb-12 flex flex-col md:items-stretch ${
-                        item.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-                    } gap-6 md:gap-8`}
+                    className={`relative mb-12 flex flex-col md:items-stretch ${item.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+                        } gap-6 md:gap-8`}
                 >
                     {/* Text phần mô tả */}
 
@@ -81,7 +100,7 @@ const Skills = () => {
                         className="relative z-10 flex flex-col items-center justify-center gap-4 md:w-1/3"
                     >
                         {/* Số thứ tự */}
-                        <span className="absolute left-0 top-0 font-heading text-[80px] font-bold text-navy opacity-30 md:top-[10%] md:text-[150px]">
+                        <span className="absolute -left-4 top-[-20px] z-0 font-heading text-[100px] font-bold text-navy/20 md:left-10 md:top-[-10px] md:text-[150px] pointer-events-none select-none">
                             {index + 1}.
                         </span>
                         <h3
@@ -108,25 +127,40 @@ const Skills = () => {
                     {/* Hình ảnh */}
                     <div
                         data-aos="fade-left"
-                        className={`grid w-full grid-cols-2 gap-2 rounded-xl p-2 md:min-h-[480px] ${
-                            item.reverse
-                                ? 'bg-gradient-to-r from-navy to-lightBlue'
-                                : 'bg-gradient-to-l from-warmBlue to-lightBlue'
-                        } md:w-2/3`}
+                        className={`grid w-full grid-cols-2 gap-2 rounded-3xl p-3 shadow-xl shadow-blue/20 md:min-h-[480px] ${item.reverse
+                            ? 'bg-gradient-to-r from-navy to-blue/40'
+                            : 'bg-gradient-to-l from-warmBlue to-lightBlue'
+                            } md:w-2/3`}
                     >
-                        {item.images.map((img, i) => (
-                            <div
-                                key={i}
-                                className="relative aspect-[4/3] md:aspect-auto"
-                            >
-                                <Image
-                                    src={`/assets/images/${img}`}
-                                    alt={item.title}
-                                    fill
-                                    className="rounded-xl object-cover"
-                                />
-                            </div>
-                        ))}
+                        {item.images.map((img, i) => {
+                            const isHidden = i >= 4
+                            const isLastVisible = i === 3 && item.images.length > 4
+                            const remaining = item.images.length - 4
+
+                            return (
+                                <a
+                                    key={i}
+                                    href={`/assets/images/${img}`}
+                                    data-fancybox={`gallery-${index}`}
+                                    className={`relative aspect-[4/3] md:aspect-auto group cursor-pointer overflow-hidden rounded-2xl ${isHidden ? 'hidden' : 'block'
+                                        }`}
+                                >
+                                    <Image
+                                        src={`/assets/images/${img}`}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    {isLastVisible && (
+                                        <div className="absolute inset-0 z-10 flex items-center justify-center bg-navy/60 backdrop-blur-xs transition-colors group-hover:bg-navy/70">
+                                            <span className="text-3xl font-bold text-white md:text-5xl">
+                                                +{remaining}
+                                            </span>
+                                        </div>
+                                    )}
+                                </a>
+                            )
+                        })}
                     </div>
                 </div>
             ))}

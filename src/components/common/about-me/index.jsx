@@ -28,11 +28,11 @@ const AboutMe = () => {
                     {/* Thông tin cá nhân */}
                     <div
                         data-aos="fade-right"
-                        className="h-full space-y-5 rounded-xl border-[2px] border-white px-4 py-8 font-body text-lg md:px-10"
+                        className="h-full space-y-5 rounded-xl border border-blue/30 bg-white/5 backdrop-blur-sm shadow-xl shadow-navy/50 px-4 py-8 font-body text-lg md:px-10"
                     >
                         {personalInfo.map((item, index) => (
                             <div key={index} className="flex flex-col">
-                                <span className="w-32 font-light italic text-warmBlue md:w-40">
+                                <span className="w-32 font-light italic text-blue md:w-40">
                                     {item.key}
                                 </span>
                                 <span className="text-right font-heading text-xl font-semibold">
@@ -42,12 +42,12 @@ const AboutMe = () => {
                         ))}
                     </div>
                     {/* Ảnh đại diện */}
-                    <div data-aos="fade-left" className="relative h-full">
+                    <div data-aos="fade-left" className="relative h-full min-h-[400px]">
                         <Image
                             src="/assets/images/self-4.jpg"
                             alt="MC Gia Phú"
                             fill
-                            className="rounded-xl object-cover"
+                            className="rounded-tr-[100px] rounded-bl-[100px] rounded-tl-xl rounded-br-xl shadow-2xl shadow-blue/20 object-cover"
                         />
                     </div>
                 </div>

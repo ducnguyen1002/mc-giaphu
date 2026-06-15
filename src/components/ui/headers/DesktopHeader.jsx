@@ -39,7 +39,7 @@ const DesktopHeader = () => {
 
     return (
         <header
-            className={`fixed left-0 top-0 z-[1000] hidden w-full transform rounded-b-xl border border-b-navy border-t-transparent bg-white py-3 shadow-lg transition-transform duration-300 lg:block ${
+            className={`fixed left-0 top-0 z-[1000] hidden w-full transform rounded-b-xl border border-b-navy border-t-transparent bg-white/70 backdrop-blur-md py-3 shadow-lg shadow-navy/10 transition-transform duration-300 lg:block ${
                 isVisible ? 'translate-y-0' : '-translate-y-full'
             }`}
         >
