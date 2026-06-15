@@ -7,8 +7,11 @@ import TheHeader from '@/components/common/the-header'
 import Video from '@/components/common/video'
 import WhyMe from '@/components/common/why-me'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import FloatingContactButtons from '@/components/common/the-contact-btns'
 import LoadingScreen from '@/components/common/loading-screen'
+
+const WelcomePopup = dynamic(() => import('@/components/common/welcome-popup'), { ssr: false })
 
 export default function Home() {
     return (
@@ -31,6 +34,7 @@ export default function Home() {
             <Feedbacks />
             <TheFooter />
             <FloatingContactButtons />
+            <WelcomePopup />
         </>
     )
 }

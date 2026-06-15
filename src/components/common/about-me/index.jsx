@@ -28,7 +28,7 @@ const AboutMe = () => {
                     {/* Thông tin cá nhân */}
                     <div
                         data-aos="fade-right"
-                        className="h-full space-y-5 rounded-xl border border-blue/30 bg-white/5 backdrop-blur-sm shadow-xl shadow-navy/50 px-4 py-8 font-body text-lg md:px-10"
+                        className="h-full space-y-5 rounded-3xl border border-blue/30 bg-white/5 backdrop-blur-sm shadow-xl shadow-navy/50 px-4 py-8 font-body text-lg md:px-10"
                     >
                         {personalInfo.map((item, index) => (
                             <div key={index} className="flex flex-col">

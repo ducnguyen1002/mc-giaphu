@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { Fancybox } from '@fancyapps/ui'
-import '@fancyapps/ui/dist/fancybox/fancybox.css'
 
 const skillsData = [
     {
@@ -66,12 +64,29 @@ const skillsData = [
 
 const Skills = () => {
     useEffect(() => {
-        Fancybox.bind('[data-fancybox]', {
-            // Options
+        // Inject Fancybox CSS
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = '/_next/static/css/../../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
+        
+        // Use CDN as fallback since local path might not work
+        const cdnLink = document.createElement('link')
+        cdnLink.rel = 'stylesheet'
+        cdnLink.href = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css'
+        document.head.appendChild(cdnLink)
+
+        let FancyboxInstance = null;
+
+        import('@fancyapps/ui').then((module) => {
+            FancyboxInstance = module.Fancybox;
+            FancyboxInstance.bind('[data-fancybox]', {})
         })
 
         return () => {
-            Fancybox.destroy()
+            if (FancyboxInstance) {
+                FancyboxInstance.destroy()
+            }
+            cdnLink.remove()
         }
     }, [])
 

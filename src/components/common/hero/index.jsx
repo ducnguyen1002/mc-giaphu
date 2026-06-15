@@ -60,7 +60,7 @@ const Hero = () => {
                     className="h-1/2 w-full md:relative md:h-full md:w-1/2"
                 >
                     {/* mobile */}
-                    <div className="relative block size-full overflow-hidden rounded-2xl border-2 border-warmBlue shadow-2xl shadow-navy/40 md:hidden">
+                    <div className="relative block size-full overflow-hidden rounded-3xl border-2 border-warmBlue shadow-2xl shadow-navy/40 md:hidden">
                         <div
                             className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
                                 }`}
@@ -77,7 +77,7 @@ const Hero = () => {
                     {/* desktop */}
                     {/* Left image */}
                     <div className="absolute bottom-0 left-0 hidden md:block">
-                        <div className="h-[420px] w-[300px] overflow-hidden rounded-xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
+                        <div className="h-[420px] w-[300px] overflow-hidden rounded-3xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
                             <div
                                 className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
                                     }`}
@@ -94,7 +94,7 @@ const Hero = () => {
 
                     {/* Right image */}
                     <div className="absolute right-[15%] top-0 hidden md:block">
-                        <div className="relative h-[420px] w-[300px] overflow-hidden rounded-xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
+                        <div className="relative h-[420px] w-[300px] overflow-hidden rounded-3xl border-2 border-warmBlue shadow-2xl shadow-navy/40">
                             <div
                                 className={`relative size-full transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'
                                     }`}
